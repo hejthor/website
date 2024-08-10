@@ -11,11 +11,23 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+    <style>
+        .calendar,
+        .calendar * {
+            border: none;
+        }
+
+        :root {
+            --color-calendar-graph-day-bg: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
 </head>
 
-<body class="bg-white dark:bg-neutral-900">
-    <div class="flex flex-col items-center sm:justify-center gap-8 py-10 px-5 sm:h-screen">
-        <img class="h-auto size-28 rounded-full" src="https://avatars.githubusercontent.com/u/71700400?v=4">
+<body class="bg-neutral-100 dark:bg-neutral-900">
+    <div class="flex flex-col items-center justify-center gap-8 py-10 sm:py-20 px-5h-screen">
+        <img class="h-auto size-28 rounded-full" src="https://github.com/thor-com-se.png">
         <div class="flex flex-col items-center gap-2">
             <h2 class="text-1xl text-neutral-600 dark:text-neutral-400">
                 Hello 👋🇸🇪
@@ -24,33 +36,77 @@
                 I'm Thor
             </h1>
         </div>
-        <div class="flex flex-col items-center gap-4 w-full sm:w-72">
-            <a target="_blank" href="certificates.html"
-                class="rounded-full py-2 w-full text-center text-1xl bg-neutral-700 dark:bg-neutral-400 bg-opacity-5 dark:bg-opacity-5 hover:bg-opacity-10 text-neutral-700 dark:text-neutral-300">
-                Professional certificates
-            </a>
-            <a target="_blank" href="https://github.com/thor-com-se"
-                class="rounded-full py-2 w-full text-center text-1xl bg-[#6e5494] bg-opacity-85 hover:bg-opacity-100 text-white dark:text-neutral-100">
-                GitHub
-            </a>
-            <a target="_blank" href="https://apps.apple.com/developer/id1565563294"
-                class="rounded-full py-2 w-full text-center text-1xl bg-[#007AFF] bg-opacity-85 hover:bg-opacity-100 text-white dark:text-neutral-100">
-                App Store
-            </a>
+
+        <div class="grid gap-5 sm:grid-cols-1 md:grid-cols-2 pt-3 sm:pt-10">
             <a target="_blank" href="https://www.instagram.com/thor.com.se"
-                class="rounded-full py-2 w-full text-center text-1xl bg-[#cd486b] bg-opacity-85 hover:bg-opacity-100 text-white dark:text-neutral-100">
-                Instagram
+                class="max-w-sm rounded-lg overflow-hidden hover:opacity-90">
+                <img class="w-full h-36 sm:h-44 object-cover dark:opacity-90" src="images/instagram.jpg" alt="" />
+                <div class="p-4 bg-[#cd486b] bg-opacity-80 text-white dark:text-neutral-100">
+                    <h5 class="mb-2 text-xl font-bold tracking-tight">Instagram</h5>
+                    <p class="font-normal text-xs">instagram.com/thor.com.se</p>
+                </div>
             </a>
             <a target="_blank" href="https://www.x.com/thor_com_se"
-                class="rounded-full py-2 w-full text-center text-1xl bg-black bg-opacity-100 hover:bg-opacity-80 dark:hover:bg-opacity-20 text-white dark:text-neutral-100">
-                X (formerly Twitter)
+                class="max-w-sm rounded-lg overflow-hidden hover:opacity-90">
+                <img class="w-full h-36 sm:h-44 object-cover dark:opacity-90"
+                    src="https://pbs.twimg.com/profile_banners/1492988453499424768/1723224351/1500x500" alt="" />
+                <div class="p-4 bg-black bg-opacity-100 text-white dark:text-neutral-100">
+                    <h5 class="mb-2 text-xl font-bold tracking-tight">X (formerly Twitter)</h5>
+                    <p class="font-normal text-xs">x.com/thor_com_se</p>
+                </div>
+            </a>
+            <a target="_blank" href="https://github.com/thor-com-se"
+                class="max-w-sm bg-[#6e5494] rounded-lg overflow-hidden hover:opacity-90">
+                <div
+                    class="w-full h-36 sm:h-44 bg-black bg-opacity-30 flex items-center justify-center overflow-hidden dark:opacity-90">
+                    <div class="calendar max-w-full max-h-full flex items-center justify-end p-5"></div>
+                </div>
+                <div class="p-4 bg-opacity-85 text-white dark:text-neutral-100">
+                    <h5 class="mb-2 text-xl font-bold tracking-tight">GitHub</h5>
+                    <p class="font-normal text-xs">github.com/thor-com-se</p>
+                </div>
             </a>
             <a target="_blank" href="https://worldofwarcraft.blizzard.com/en-us/character/us/fizzcrank/thorr"
-                class="rounded-full py-2 w-full text-center text-1xl bg-[#0070DD] bg-opacity-85 hover:bg-opacity-100 text-white dark:text-neutral-100">
-                Thorr - Fizzcrank (US)
+                class="rounded-lg overflow-hidden max-w-sm hover:opacity-90">
+                <div class="relative dark:opacity-90">
+                    <img class="w-full h-36 sm:h-44 object-cover"
+                        src="https://render-eu.worldofwarcraft.com/profile-backgrounds/v2/armory_bg_class_shaman.jpg"
+                        alt="" />
+                    <img class="absolute inset-0 w-full h-36 sm:h-44 object-cover"
+                        src="https://render.worldofwarcraft.com/us/character/fizzcrank/179/241366451-main-raw.png"
+                        alt="" />
+                </div>
+                <div class="p-4 bg-[#F4BF2A] bg-opacity-100 text-[#2B374C]">
+                    <h5 class="mb-2 text-xl font-bold tracking-tight">Thorr - Fizzcrank (US)</h5>
+                    <p class="font-normal text-xs">worldofwarcraft.blizzard.com</p>
+                </div>
+            </a>
+            <a target="_blank" href="https://thor-com-se.github.io/certificates"
+                class="max-w-sm rounded-lg overflow-hidden hover:opacity-90">
+                <img class="bg-white pt-3 sm:py-3 w-full h-36 sm:h-44 object-cover object-top sm:object-contain dark:opacity-85"
+                    src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~T4ENXQ7P4AG4/CERTIFICATE_LANDING_PAGE~T4ENXQ7P4AG4.jpeg"
+                    alt="" />
+                <div class="p-4 bg-neutral-200 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300">
+                    <h5 class="mb-2 text-xl font-bold tracking-tight">Professional certificates</h5>
+                    <p class="font-normal text-xs">thor-com-se.github.io/certificates</p>
+                </div>
+            </a>
+            <a target="_blank" href="https://apps.apple.com/developer/id1565563294"
+                class="max-w-sm rounded-lg overflow-hidden hover:opacity-90">
+                <img class="w-full h-36 sm:h-44 object-cover dark:opacity-90"
+                    src="https://docs-assets.developer.apple.com/published/b4f3f486b9ab366e025ec974126e0e49/technologies-SIWA-intro~dark@2x.png"
+                    alt="" />
+                <div class="p-4 bg-[#007AFF] bg-opacity-85 text-white dark:text-neutral-100">
+                    <h5 class="mb-2 text-xl font-bold tracking-tight">App Store Developer</h5>
+                    <p class="font-normal text-xs">apple.com/developer/id1565563294</p>
+                </div>
             </a>
         </div>
     </div>
+
+    <script>
+        GitHubCalendar(".calendar", "thor-com-se", { responsive: true, tooltips: false, global_stats: false });
+    </script>
 </body>
 
 </html>
