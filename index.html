@@ -18,9 +18,26 @@
         .calendar * {
             border: none;
         }
-
+        .ContributionCalendar-day {
+            border: #6b6b6b 1px solid;
+        }
+        .js-calendar-graph {
+            font-size: 10px;
+        }
+        tbody:before {
+            content: "@";
+            display: block;
+            line-height: 10px;
+            text-indent: -99999px;
+        }
+        tbody:after {
+            content: "@";
+            display: block;
+            line-height: 5px;
+            text-indent: -99999px;
+        }
         :root {
-            --color-calendar-graph-day-bg: rgba(255, 255, 255, 0.2);
+            --color-calendar-graph-day-bg: rgba(0, 0, 0, 0.2);
         }
     </style>
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
@@ -59,7 +76,7 @@
             <a target="_blank" href="https://github.com/thor-com-se"
                 class="max-w-sm bg-[#6e5494] rounded-lg overflow-hidden sm:hover:opacity-90">
                 <div
-                    class="w-full h-40 sm:h-44 bg-black bg-opacity-30 flex items-center justify-center overflow-hidden dark:opacity-90">
+                    class="pt-2 w-full h-40 sm:h-44 bg-black bg-opacity-30 flex items-center justify-center overflow-hidden dark:opacity-90">
                     <div class="calendar max-w-full max-h-full flex items-center justify-end p-5"></div>
                 </div>
                 <div class="p-4 text-white dark:text-neutral-100">
