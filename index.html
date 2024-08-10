@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark">
-    <meta name="theme-color" content="rgb(23, 23, 23)" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="rgb(23, 23, 23)" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
     <title>Hello, I'm Thor</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -45,7 +46,7 @@
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
 </head>
 
-<body class="bg-neutral-100 dark:bg-neutral-900">
+<body class="bg-neutral-100 dark:bg-black">
     <div class="flex flex-col items-center justify-center gap-8 px-4 sm:px-0 py-10 sm:py-20 px-5h-screen">
         <img class="h-auto size-28 rounded-full" src="https://github.com/thor-com-se.png">
         <div class="flex flex-col items-center gap-2">
@@ -139,11 +140,11 @@
             </a>
             <a target="_blank" href="https://thor-com-se.github.io/certificates"
                 class="max-w-sm rounded-lg overflow-hidden sm:hover:opacity-90">
-                <img class="bg-white pt-4 w-full h-40 object-cover object-top dark:opacity-85"
+                <img class="bg-white pt-4 w-full h-40 object-cover object-top dark:opacity-90"
                     src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~T4ENXQ7P4AG4/CERTIFICATE_LANDING_PAGE~T4ENXQ7P4AG4.jpeg"
                     alt="" />
                 <div
-                    class="flex items-center gap-4 p-4 bg-neutral-200 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-100">
+                    class="flex items-center gap-4 p-4 bg-neutral-200 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-100">
                     <svg width="34" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                         <path fill="#0081FB"
                             d="M173.8 5.5c11-7.3 25.4-7.3 36.4 0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4 0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7L301 344.5c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4 0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2 .8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 301c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4 0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.4 58.6L83 39.5c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1 .4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM1.3 441.8L44.4 339.3c.2 .1 .3 .2 .4 .4l9.6 19.1c11.7 23.2 36 37.3 62 35.8l21.3-1.3c.2 0 .5 0 .7 .2l17.8 11.8c5.1 3.3 10.5 5.9 16.1 7.7l-37.6 89.3c-2.3 5.5-7.4 9.2-13.3 9.7s-11.6-2.2-14.8-7.2L74.4 455.5l-56.1 8.3c-5.7 .8-11.4-1.5-15-6s-4.3-10.7-2.1-16zm248 60.4L211.7 413c5.6-1.8 11-4.3 16.1-7.7l17.8-11.8c.2-.1 .4-.2 .7-.2l21.3 1.3c26 1.5 50.3-12.6 62-35.8l9.6-19.1c.1-.2 .2-.3 .4-.4l43.2 102.5c2.2 5.3 1.4 11.4-2.1 16s-9.3 6.9-15 6l-56.1-8.3-32.2 49.2c-3.2 5-8.9 7.7-14.8 7.2s-11-4.3-13.3-9.7z" />
@@ -156,12 +157,12 @@
             </a>
             <a target="_blank" href="https://apps.apple.com/developer/id1565563294"
                 class="max-w-sm rounded-lg overflow-hidden sm:hover:opacity-90">
-                <img class="w-full h-40 object-cover dark:opacity-90"
-                    src="https://docs-assets.developer.apple.com/published/b8963a90b4d1a310fea45a636efa7eb7/technologies-iMessage-Apps-intro~dark@2x.png"
+                <img class="bg-[#007AFF] w-full h-40 object-cover dark:opacity-90 pt-4"
+                    src="https://developer.apple.com/ios/planning/images/planning-ios-marker-large_2x.webp"
                     alt="" />
-                <div class="flex items-center gap-4 p-4 bg-[#007AFF] bg-opacity-85 text-white dark:text-neutral-100">
+                <div class="flex items-center gap-4 p-4 bg-neutral-200 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-100">
                     <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="#ffffff"
+                        <path fill="#007AFF"
                             d="M255.9 120.9l9.1-15.7c5.6-9.8 18.1-13.1 27.9-7.5 9.8 5.6 13.1 18.1 7.5 27.9l-87.5 151.5h63.3c20.5 0 32 24.1 23.1 40.8H113.8c-11.3 0-20.4-9.1-20.4-20.4 0-11.3 9.1-20.4 20.4-20.4h52l66.6-115.4-20.8-36.1c-5.6-9.8-2.3-22.2 7.5-27.9 9.8-5.6 22.2-2.3 27.9 7.5l8.9 15.7zm-78.7 218l-19.6 34c-5.6 9.8-18.1 13.1-27.9 7.5-9.8-5.6-13.1-18.1-7.5-27.9l14.6-25.2c16.4-5.1 29.8-1.2 40.4 11.6zm168.9-61.7h53.1c11.3 0 20.4 9.1 20.4 20.4 0 11.3-9.1 20.4-20.4 20.4h-29.5l19.9 34.5c5.6 9.8 2.3 22.2-7.5 27.9-9.8 5.6-22.2 2.3-27.9-7.5-33.5-58.1-58.7-101.6-75.4-130.6-17.1-29.5-4.9-59.1 7.2-69.1 13.4 23 33.4 57.7 60.1 104zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm216 248c0 118.7-96.1 216-216 216-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216z" />
                     </svg>
                     <div class="flex flex-col">
