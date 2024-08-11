@@ -42,22 +42,38 @@
         :root {
             --color-calendar-graph-day-bg: rgba(0, 0, 0, 0.2);
         }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.5s ease-out;
+        }
     </style>
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <script src="https://unpkg.com/color.js@1.2.0/dist/color.js"></script>
 </head>
 
 <body class="bg-[#ededed] dark:bg-neutral-950">
-    <div class="flex flex-col items-center justify-center gap-5 px-4 sm:px-0 pt-10 pb-16 sm:py-20 px-5h-screen">
+    <div id="content"
+        class="hidden flex flex-col items-center justify-center gap-5 px-4 sm:px-0 pt-10 pb-16 sm:py-20 px-5h-screen fade-in-up">
         <div class="w-full grid sm:max-w-sm md:max-w-3xl">
             <div class="rounded-lg overflow-hidden">
                 <div class="relative flex justify-center items-center">
-                    <img id="banner-image" class="w-full h-60 md:h-72 object-cover dark:opacity-85"
-                        alt="" />
+                    <img id="banner-image" class="w-full h-60 md:h-72 object-cover dark:opacity-85" alt="" />
                     <img class="absolute h-auto size-36 rounded-full border-2 border-neutral-300"
                         src="https://github.com/thor-com-se.png" alt="">
                 </div>
-                <div class="flex items-center justify-between py-3 sm:py-4 px-5 bg-[#005293] text-white" id="banner-label">
+                <div class="flex items-center justify-between py-3 sm:py-4 px-5 text-white" id="banner-label">
                     <div class="flex flex-col flex-grow">
                         <h5 class="text-xl font-bold tracking-tight dark:opacity-90">Thor Lindberg</h5>
                         <p class="font-normal text-xs opacity-80">IT Consultant</p>
@@ -234,22 +250,77 @@
         </div>
     </div>
     <script>
-        var images = [
-            "https://www.visitstockholm.com/media/original_images/d3bfbb3a90a44f2a90757b35e3ee19d3.PNG",
-            "https://imageio.forbes.com/blogs-images/geoffreymorrison/files/2016/05/Stockholm-Metro-by-Geoffrey-Morrison-1200x800.jpg",
-            "https://i0.wp.com/walkslowrunwild.com/wp-content/uploads/2018/03/Stockholm-Stadion-Metro-Art-Rainbow.jpg",
-            "https://www.designisthis.com/blog/images/uploads/2013/07/Stockholm-Metro-Stations-21.jpg"
-        ];
-        var randomIndex = Math.floor(Math.random() * images.length);
-        var selectedImage = images[randomIndex];
-        document.getElementById('banner-image').src = selectedImage;
-
-        colorjs.prominent(selectedImage, { amount: 1 }).then(color => {
-            document.getElementById('banner-label').src = selectedImage;
-        })
+        GitHubCalendar(".calendar", "thor-com-se", { responsive: true, tooltips: false, global_stats: false });
     </script>
     <script>
-        GitHubCalendar(".calendar", "thor-com-se", { responsive: true, tooltips: false, global_stats: false });
+        var banners = [
+            {
+                color: "rgb(37,  64, 119)",
+                image: "banner.jpg"
+            },
+            {
+                color: "rgb(53, 94, 27)",
+                image: "https://lh3.googleusercontent.com/C_DXfpdCpHwc9I98ynjpoeVM5gh1cDKDUuYMseHSLGRq67C5sW523FrN-mVX9x1HraEfV7hjmbq0jmU4RPZogsvOTWbA=w1200-h630-n"
+            },
+            {
+                color: "rgb(176, 59, 30)",
+                image: "https://i0.wp.com/walkslowrunwild.com/wp-content/uploads/2018/03/Stockholm-Stadion-Metro-Art-Rainbow.jpg"
+            },
+            {
+                color: "rgb(37, 76, 53)",
+                image: "https://i0.wp.com/aglobewelltravelled.com/wp-content/uploads/2016/07/Stockholm-Subway-3.jpg"
+            }
+        ];
+
+        function resizeImage(url, newHeight, callback, errorCallback) {
+            const img = new Image();
+            img.src = url;
+            img.crossOrigin = "Anonymous"; // To avoid CORS issues
+
+            img.onload = function () {
+                // Get the original dimensions of the image
+                const originalWidth = img.width;
+                const originalHeight = img.height;
+
+                // Calculate the aspect ratio
+                const aspectRatio = originalWidth / originalHeight;
+
+                // Calculate the new width based on the new height
+                const newWidth = newHeight * aspectRatio;
+
+                // Create a canvas and set its dimensions
+                const canvas = document.createElement('canvas');
+                canvas.width = newWidth;
+                canvas.height = newHeight;
+
+                // Draw the image on the canvas
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0, newWidth, newHeight);
+
+                // Get the resized image as a data URL
+                const dataURL = canvas.toDataURL('image/jpeg');
+                callback(dataURL);
+            };
+            img.onerror = function () {
+                // Handle errors, e.g., image not found
+                errorCallback();
+            };
+        }
+
+        var randomIndex = Math.floor(Math.random() * banners.length);
+        var selection = banners[randomIndex];
+
+        resizeImage(selection.image, 400, function (resizedImageDataUrl) {
+            document.getElementById('banner-image').src = resizedImageDataUrl;
+            document.getElementById('banner-label').style.backgroundColor = selection.color;
+            document.getElementById('content').classList.remove('hidden');
+        }, function () {
+        // Fallback logic if image fails to load
+        console.error('Failed to load image:', selection.image);
+        document.getElementById('banner-image').src = "banner.jpg";
+        document.getElementById('banner-label').style.backgroundColor = "rgb(37,  64, 119)";
+        document.getElementById('content').classList.remove('hidden');
+    });
     </script>
 </body>
 
