@@ -41,8 +41,12 @@ fetch('resources/banners.json')
             resizeImage(imageData.image, 400, function (resizedImageDataUrl) {
                 document.getElementById('banner-image').src = resizedImageDataUrl;
                 document.getElementById('banner-label').style.backgroundColor = imageData.color;
-                document.getElementById('banner').classList.remove('hidden');
-                document.getElementById('content').classList.remove('hidden');
+                setTimeout(function () {
+                    document.getElementById('banner').classList.remove('hidden');
+                }, 100);
+                setTimeout(function () {
+                    document.getElementById('content').classList.remove('hidden');
+                }, 300);
                 onSuccess();
             }, onFailure);
         }
