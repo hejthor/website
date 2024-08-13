@@ -14,59 +14,16 @@
     <link rel="manifest" href="/favicon/site.webmanifest">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
-    <style>
-        .calendar,
-        .calendar * {
-            border: none;
-        }
-
-        .ContributionCalendar-day {
-            border: #544072 2px solid;
-        }
-
-        .js-calendar-graph {
-            font-size: 10px;
-        }
-
-        tbody:before {
-            content: "@";
-            display: block;
-            line-height: 5px;
-            text-indent: -99999px;
-        }
-
-        .f6 {
-            display: none;
-        }
-
-        :root {
-            --color-calendar-graph-day-bg: rgba(0, 0, 0, 0.2);
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.5s ease-out;
-        }
-    </style>
+    <link rel="stylesheet" href="resources/styles.css">
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
-    <script src="https://unpkg.com/color.js@1.2.0/dist/color.js"></script>
+    <script src="resources/loadBanner.js" defer></script>
+    <script src="resources/loadCalendar.js" defer></script>
 </head>
 
 <body class="bg-[#ededed] dark:bg-neutral-950">
     <div id="content"
         class="hidden flex flex-col items-center justify-center gap-5 px-4 sm:px-0 pt-10 pb-16 sm:py-20 px-5h-screen fade-in-up">
-        <div class="w-full grid sm:max-w-sm md:max-w-3xl">
+        <div id="banner" class="hidden w-full grid sm:max-w-sm md:max-w-3xl pb-5 sm:pb-10 ">
             <div class="rounded-lg overflow-hidden">
                 <div class="relative flex justify-center items-center">
                     <img id="banner-image" class="w-full h-60 md:h-72 object-cover dark:opacity-85" alt="" />
@@ -87,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="grid gap-5 pt-5 sm:pt-10 sm:max-w-sm md:max-w-3xl sm:grid-cols-1 md:grid-cols-2">
+        <div class="grid gap-5 sm:max-w-sm md:max-w-3xl sm:grid-cols-1 md:grid-cols-2">
             <a target="_blank" href="https://www.instagram.com/thor.com.se"
                 class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
                 <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#ac3958] text-white">
@@ -286,75 +243,6 @@
             </a>
         </div>
     </div>
-    <script>
-        GitHubCalendar(".calendar", "thor-com-se", { responsive: true, tooltips: false, global_stats: false });
-    </script>
-    <script>
-        var banners = [
-            {
-                color: "rgb(37,  64, 119)",
-                image: "banner.jpg"
-            },
-            {
-                color: "rgb(176, 59, 30)",
-                image: "https://i0.wp.com/walkslowrunwild.com/wp-content/uploads/2018/03/Stockholm-Stadion-Metro-Art-Rainbow.jpg"
-            },
-            {
-                color: "rgb(37, 76, 53)",
-                image: "https://i0.wp.com/aglobewelltravelled.com/wp-content/uploads/2016/07/Stockholm-Subway-3.jpg"
-            }
-        ];
-
-        function resizeImage(url, newHeight, callback, errorCallback) {
-            const img = new Image();
-            img.src = url;
-            img.crossOrigin = "Anonymous"; // To avoid CORS issues
-
-            img.onload = function () {
-                // Get the original dimensions of the image
-                const originalWidth = img.width;
-                const originalHeight = img.height;
-
-                // Calculate the aspect ratio
-                const aspectRatio = originalWidth / originalHeight;
-
-                // Calculate the new width based on the new height
-                const newWidth = newHeight * aspectRatio;
-
-                // Create a canvas and set its dimensions
-                const canvas = document.createElement('canvas');
-                canvas.width = newWidth;
-                canvas.height = newHeight;
-
-                // Draw the image on the canvas
-                const ctx = canvas.getContext('2d');
-                ctx.drawImage(img, 0, 0, newWidth, newHeight);
-
-                // Get the resized image as a data URL
-                const dataURL = canvas.toDataURL('image/jpeg');
-                callback(dataURL);
-            };
-            img.onerror = function () {
-                // Handle errors, e.g., image not found
-                errorCallback();
-            };
-        }
-
-        var randomIndex = Math.floor(Math.random() * banners.length);
-        var selection = banners[randomIndex];
-
-        resizeImage(selection.image, 400, function (resizedImageDataUrl) {
-            document.getElementById('banner-image').src = resizedImageDataUrl;
-            document.getElementById('banner-label').style.backgroundColor = selection.color;
-            document.getElementById('content').classList.remove('hidden');
-        }, function () {
-        // Fallback logic if image fails to load
-        console.error('Failed to load image:', selection.image);
-        document.getElementById('banner-image').src = "banner.jpg";
-        document.getElementById('banner-label').style.backgroundColor = "rgb(37,  64, 119)";
-        document.getElementById('content').classList.remove('hidden');
-    });
-    </script>
 </body>
 
 </html>

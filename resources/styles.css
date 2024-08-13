@@ -1,0 +1,43 @@
+.calendar,
+.calendar * {
+    border: none;
+}
+
+.ContributionCalendar-day {
+    border: #544072 2px solid;
+}
+
+.js-calendar-graph {
+    font-size: 10px;
+}
+
+tbody:before {
+    content: "@";
+    display: block;
+    line-height: 5px;
+    text-indent: -99999px;
+}
+
+.f6 {
+    display: none;
+}
+
+:root {
+    --color-calendar-graph-day-bg: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.5s ease-out;
+}
