@@ -43,10 +43,8 @@ fetch('resources/banners.json')
                 document.getElementById('banner-label').style.backgroundColor = imageData.color;
                 setTimeout(function () {
                     document.getElementById('banner').classList.remove('hidden');
-                }, 100);
-                setTimeout(function () {
                     document.getElementById('content').classList.remove('hidden');
-                }, 300);
+                }, 200);
                 onSuccess();
             }, onFailure);
         }
