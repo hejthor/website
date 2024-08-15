@@ -67,11 +67,19 @@ tbody:before {
         transform: scale(0.9);
     }
     
+    60% {
+        transform: scale(1.02);
+    }
+    
+    80% {
+        transform: scale(0.99);
+    }
+    
     100% {
         transform: scale(1.0);
     }
 }
 
 .scale-up {
-    animation: scaleUp 0.7s ease-out;
+    animation: scaleUp 1s ease-out;
 }
