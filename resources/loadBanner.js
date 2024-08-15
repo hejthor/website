@@ -43,7 +43,10 @@ fetch('resources/banners.json')
                 document.getElementById('banner-label').style.backgroundColor = imageData.color;
                 setTimeout(function () {
                     document.getElementById('banner').classList.remove('hidden');
-                    document.getElementById('content').classList.remove('hidden');
+                    const children = document.getElementById('content').children;
+                    for (let i = 0; i < children.length; i++) {
+                        children[i].classList.remove('hidden');
+                    }
                 }, 200);
                 onSuccess();
             }, onFailure);
@@ -89,17 +92,26 @@ fetch('resources/banners.json')
                     }, function () {
                         // If the fallback also fails, only remove the hidden class from the content
                         console.error('Failed to load fallback image:', banners[fallbackIndex].image);
-                        document.getElementById('content').classList.remove('hidden');
+                        const children = document.getElementById('content').children;
+                        for (let i = 0; i < children.length; i++) {
+                            children[i].classList.remove('hidden');
+                        }
                     });
                 });
             } else {
                 // If fallbackIndex is not included, fail directly
-                document.getElementById('content').classList.remove('hidden');
+                const children = document.getElementById('content').children;
+                for (let i = 0; i < children.length; i++) {
+                    children[i].classList.remove('hidden');
+                }
             }
         });
     })
     .catch(error => {
         // Handle errors in fetching the JSON file
         console.error('Error fetching banners.json:', error);
-        document.getElementById('content').classList.remove('hidden');
+        const children = document.getElementById('content').children;
+        for (let i = 0; i < children.length; i++) {
+            children[i].classList.remove('hidden');
+        }
     });

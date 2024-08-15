@@ -8,7 +8,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="rgb(237, 237, 237)" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="rgb(10, 10, 10)" />
     <title>Hello, I'm Thor</title>
-    
+
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -25,9 +25,8 @@
 </head>
 
 <body class="bg-[#ededed] dark:bg-neutral-950">
-    <div
-        class="flex flex-col items-center justify-center gap-5 px-4 sm:px-0 pt-10 pb-16 sm:py-20 px-5h-screen">
-        <div id="banner" class="hidden w-full grid sm:max-w-sm md:max-w-3xl pb-5 sm:pb-10 fade-in-up">
+    <div class="flex flex-col items-center justify-center px-4 sm:px-0 pt-10 pb-16 sm:py-20 px-5h-screen">
+        <div id="banner" class="hidden w-full grid sm:max-w-sm md:max-w-3xl fade-in-up">
             <div class="rounded-lg overflow-hidden scale-up">
                 <div class="relative flex justify-center items-center">
                     <img id="banner-image" class="w-full h-60 md:h-72 object-cover dark:opacity-85" alt="" />
@@ -45,129 +44,188 @@
                 </div>
             </div>
         </div>
-        <div id="content" class="hidden grid gap-5 sm:max-w-sm md:max-w-3xl sm:grid-cols-1 md:grid-cols-2 fade-in-up">
-            <a target="_blank" href="https://www.instagram.com/thor.com.se"
-                class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
-                <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#ac3958] text-white">
-                    <div class="w-14 dark:opacity-90">
-                        <img src="resources/vectors/instagram.svg" alt="" />
+        <div id="content">
+            <div class="hidden grid gap-5 pt-10 sm:pt-14 sm:max-w-sm md:max-w-3xl sm:grid-cols-1 md:grid-cols-2 fade-in-up">
+                <a target="_blank" href="https://www.instagram.com/thor.com.se"
+                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#ac3958] text-white">
+                        <div class="w-14 dark:opacity-90">
+                            <img src="resources/vectors/instagram.svg" alt="" />
+                        </div>
+                        <div class="flex flex-col flex-grow">
+                            <h5 class="text-xl font-bold tracking-tight dark:opacity-90">Instagram</h5>
+                            <p class="font-normal text-xs opacity-80">instagram.com/thor.com.se</p>
+                        </div>
+                        <img src="resources/vectors/chevron.svg" alt="" />
                     </div>
-                    <div class="flex flex-col flex-grow">
-                        <h5 class="text-xl font-bold tracking-tight dark:opacity-90">Instagram</h5>
-                        <p class="font-normal text-xs opacity-80">instagram.com/thor.com.se</p>
+                </a>
+                <a target="_blank" href="https://www.x.com/thor_com_se"
+                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#15202B] dark:bg-[#1b2836] text-white">
+                        <div class="w-14 dark:opacity-90">
+                            <img src="resources/vectors/x.svg" alt="" />
+                        </div>
+                        <div class="flex flex-col flex-grow">
+                            <h5 class="text-xl font-bold tracking-tight dark:opacity-90">X (formerly Twitter)</h5>
+                            <p class="font-normal text-xs opacity-80">x.com/thor_com_se</p>
+                        </div>
+                        <img src="resources/vectors/chevron.svg" alt="" />
                     </div>
-                    <img src="resources/vectors/chevron.svg" alt="" />
-                </div>
-            </a>
-            <a target="_blank" href="https://www.x.com/thor_com_se"
-                class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
-                <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#15202B] dark:bg-[#1b2836] text-white">
-                    <div class="w-14 dark:opacity-90">
-                        <img src="resources/vectors/x.svg" alt="" />
+                </a>
+                <a target="_blank" href="https://worldofwarcraft.blizzard.com/en-us/character/us/fizzcrank/thorr"
+                    class="sm:hidden rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    <div class="relative">
+                        <img class="w-full h-44 object-cover"
+                            src="https://render-eu.worldofwarcraft.com/profile-backgrounds/v2/armory_bg_class_shaman.jpg"
+                            alt="" />
+                        <img class="absolute inset-0 w-full h-44 object-cover"
+                            src="https://render.worldofwarcraft.com/us/character/fizzcrank/179/241366451-main-raw.png"
+                            alt="" />
                     </div>
-                    <div class="flex flex-col flex-grow">
-                        <h5 class="text-xl font-bold tracking-tight dark:opacity-90">X (formerly Twitter)</h5>
-                        <p class="font-normal text-xs opacity-80">x.com/thor_com_se</p>
+                    <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#2B374C] text-[#F4BF2A]">
+                        <div class="w-14 dark:opacity-90">
+                            <img src="resources/vectors/warcraft.svg" alt="" />
+                        </div>
+                        <div class="flex flex-col flex-grow">
+                            <h5 class="text-xl font-bold tracking-tight">Thorr - Fizzcrank (US)</h5>
+                            <p class="font-normal text-xs opacity-80">worldofwarcraft.blizzard.com</p>
+                        </div>
+                        <img src="resources/vectors/chevron.svg" alt="" />
                     </div>
-                    <img src="resources/vectors/chevron.svg" alt="" />
-                </div>
-            </a>
-            <a target="_blank" href="https://worldofwarcraft.blizzard.com/en-us/character/us/fizzcrank/thorr"
-                class="sm:hidden rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
-                <div class="relative">
-                    <img class="w-full h-44 object-cover"
-                        src="https://render-eu.worldofwarcraft.com/profile-backgrounds/v2/armory_bg_class_shaman.jpg"
+                </a>
+                <a target="_blank" href="https://github.com/thor-com-se"
+                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    <div class="pb-2 w-full h-44 bg-[#544072] flex items-center justify-center overflow-hidden">
+                        <div class="calendar max-w-full max-h-full flex items-center justify-end p-5"></div>
+                    </div>
+                    <div class="flex items-center bg-[#604983] py-3 sm:py-4 ps-4 pe-5 text-white">
+                        <div class="w-14 dark:opacity-90">
+                            <svg width="36" height="36" aria-hidden="true" viewBox="0 0 24 24" version="1.1"
+                                data-view-component="true">
+                                <path fill="#ffffff"
+                                    d="M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="flex flex-col flex-grow">
+                            <h5 class="text-xl font-bold tracking-tight dark:opacity-90">GitHub</h5>
+                            <p class="font-normal text-xs opacity-80">github.com/thor-com-se</p>
+                        </div>
+                        <img class="opacity-60 dark:opacity-60" src="resources/vectors/chevron.svg" alt="" />
+                    </div>
+                </a>
+                <a target="_blank" href="https://worldofwarcraft.blizzard.com/en-us/character/us/fizzcrank/thorr"
+                    class="hidden sm:block rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    <div class="relative">
+                        <img class="w-full h-44 object-cover"
+                            src="https://render-eu.worldofwarcraft.com/profile-backgrounds/v2/armory_bg_class_shaman.jpg"
+                            alt="" />
+                        <img class="absolute inset-0 w-full h-44 object-cover"
+                            src="https://render.worldofwarcraft.com/us/character/fizzcrank/179/241366451-main-raw.png"
+                            alt="" />
+                    </div>
+                    <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#2B374C] text-[#F4BF2A]">
+                        <div class="w-14 dark:opacity-90">
+                            <img src="resources/vectors/warcraft.svg" alt="" />
+                        </div>
+                        <div class="flex flex-col flex-grow">
+                            <h5 class="text-xl font-bold tracking-tight">Thorr - Fizzcrank (US)</h5>
+                            <p class="font-normal text-xs opacity-80">worldofwarcraft.blizzard.com</p>
+                        </div>
+                        <img class="opacity-60 dark:opacity-60" src="resources/vectors/chevron.svg" alt="" />
+                    </div>
+                </a>
+                <a target="_blank" href="https://thor-com-se.github.io/certificates"
+                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    <img class="bg-white pt-4 pb-1 dark:py-4 w-full h-44 object-contain dark:opacity-90"
+                        src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~T4ENXQ7P4AG4/CERTIFICATE_LANDING_PAGE~T4ENXQ7P4AG4.jpeg"
                         alt="" />
-                    <img class="absolute inset-0 w-full h-44 object-cover"
-                        src="https://render.worldofwarcraft.com/us/character/fizzcrank/179/241366451-main-raw.png"
+                    <div
+                        class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300">
+                        <div class="w-14 dark:opacity-90">
+                            <img src="resources/vectors/award.svg" alt="" />
+                        </div>
+                        <div class="flex flex-col flex-grow">
+                            <h5 class="text-xl font-bold tracking-tight">Professional certificates</h5>
+                            <p class="font-normal text-xs opacity-80">thor-com-se.github.io/certificates</p>
+                        </div>
+                        <img class="opacity-20 dark:hidden" src="resources/vectors/chevron-dark.svg" alt="" />
+                        <img class="opacity-40 hidden dark:block" src="resources/vectors/chevron.svg" alt="" />
+                    </div>
+                </a>
+                <a target="_blank" href="https://apps.apple.com/developer/id1565563294"
+                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    <img class="bg-[#0063cc] w-full h-44 object-cover pt-4"
+                        src="https://developer.apple.com/ios/planning/images/planning-ios-marker-large_2x.webp"
                         alt="" />
-                </div>
-                <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#2B374C] text-[#F4BF2A]">
-                    <div class="w-14 dark:opacity-90">
-                        <img src="resources/vectors/warcraft.svg" alt="" />
+                    <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#006fe6] text-white">
+                        <div class="w-14 dark:opacity-90">
+                            <img src="resources/vectors/appstore.svg" alt="" />
+                        </div>
+                        <div class="flex flex-col flex-grow">
+                            <h5 class="text-xl font-bold tracking-tight dark:opacity-90">App Store Developer</h5>
+                            <p class="font-normal text-xs opacity-80">apple.com/developer/id1565563294</p>
+                        </div>
+                        <img class="opacity-60 dark:opacity-60" src="resources/vectors/chevron.svg" alt="" />
                     </div>
-                    <div class="flex flex-col flex-grow">
-                        <h5 class="text-xl font-bold tracking-tight">Thorr - Fizzcrank (US)</h5>
-                        <p class="font-normal text-xs opacity-80">worldofwarcraft.blizzard.com</p>
-                    </div>
-                    <img src="resources/vectors/chevron.svg" alt="" />
-                </div>
-            </a>
-            <a target="_blank" href="https://github.com/thor-com-se"
-                class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
-                <div class="pb-2 w-full h-44 bg-[#544072] flex items-center justify-center overflow-hidden">
-                    <div class="calendar max-w-full max-h-full flex items-center justify-end p-5"></div>
-                </div>
-                <div class="flex items-center bg-[#604983] py-3 sm:py-4 ps-4 pe-5 text-white">
-                    <div class="w-14 dark:opacity-90">
-                        <svg width="36" height="36" aria-hidden="true" viewBox="0 0 24 24" version="1.1"
-                            data-view-component="true">
-                            <path fill="#ffffff"
-                                d="M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z">
-                            </path>
-                        </svg>
-                    </div>
-                    <div class="flex flex-col flex-grow">
-                        <h5 class="text-xl font-bold tracking-tight dark:opacity-90">GitHub</h5>
-                        <p class="font-normal text-xs opacity-80">github.com/thor-com-se</p>
-                    </div>
-                    <img class="opacity-60 dark:opacity-60" src="resources/vectors/chevron.svg" alt="" />
-                </div>
-            </a>
-            <a target="_blank" href="https://worldofwarcraft.blizzard.com/en-us/character/us/fizzcrank/thorr"
-                class="hidden sm:block rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
-                <div class="relative">
-                    <img class="w-full h-44 object-cover"
-                        src="https://render-eu.worldofwarcraft.com/profile-backgrounds/v2/armory_bg_class_shaman.jpg"
+                </a>
+            </div>
+            <div class="hidden grid gap-5 pt-10 sm:pt-14 sm:max-w-sm md:max-w-3xl sm:grid-cols-1 md:grid-cols-2 fade-in-up">
+                <a target="_blank" href="https://github.com/thor-com-se/copy-from-excel"
+                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    <img class="bg-neutral-800 px-4 pt-4 object-top w-full h-44 object-cover dark:opacity-90"
+                        src="https://github.com/thor-com-se/copy-from-excel/raw/main/image-userform.png"
                         alt="" />
-                    <img class="absolute inset-0 w-full h-44 object-cover"
-                        src="https://render.worldofwarcraft.com/us/character/fizzcrank/179/241366451-main-raw.png"
+                    <div
+                        class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#217346] text-white">
+                        <div class="w-14 dark:opacity-90">
+                            <img src="resources/vectors/instagram.svg" alt="" />
+                        </div>
+                        <div class="flex flex-col flex-grow">
+                            <h5 class="text-xl font-bold tracking-tight">Copy From Excel</h5>
+                            <p class="font-normal text-xs opacity-80">github.com/thor-com-se/copy-from-excel</p>
+                        </div>
+                        <img class="opacity-20 dark:hidden" src="resources/vectors/chevron-dark.svg" alt="" />
+                        <img class="opacity-40 hidden dark:block" src="resources/vectors/chevron.svg" alt="" />
+                    </div>
+                </a>
+                <a target="_blank" href="https://thor-com-se.github.io/playscript"
+                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    <img class="bg-neutral-800 px-4 pt-4 object-top w-full h-44 object-cover dark:opacity-90"
+                        src="https://thor-com-se.github.io/playscript/desktop.png"
                         alt="" />
-                </div>
-                <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#2B374C] text-[#F4BF2A]">
-                    <div class="w-14 dark:opacity-90">
-                        <img src="resources/vectors/warcraft.svg" alt="" />
+                    <div
+                        class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300">
+                        <div class="w-14 dark:opacity-90">
+                            <img src="resources/vectors/instagram.svg" alt="" />
+                        </div>
+                        <div class="flex flex-col flex-grow">
+                            <h5 class="text-xl font-bold tracking-tight">PlayScript (web game)</h5>
+                            <p class="font-normal text-xs opacity-80">thor-com-se.github.io/playscript</p>
+                        </div>
+                        <img class="opacity-20 dark:hidden" src="resources/vectors/chevron-dark.svg" alt="" />
+                        <img class="opacity-40 hidden dark:block" src="resources/vectors/chevron.svg" alt="" />
                     </div>
-                    <div class="flex flex-col flex-grow">
-                        <h5 class="text-xl font-bold tracking-tight">Thorr - Fizzcrank (US)</h5>
-                        <p class="font-normal text-xs opacity-80">worldofwarcraft.blizzard.com</p>
+                </a>
+                <a target="_blank" href="https://thor-com-se.github.io/measure"
+                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    <img class="bg-neutral-800 py-4 w-full h-44 object-contain dark:opacity-90"
+                        src="https://thor-com-se.github.io/measure/preview-light.png"
+                        alt="" />
+                    <div
+                        class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300">
+                        <div class="w-14 dark:opacity-90">
+                            <img src="resources/vectors/instagram.svg" alt="" />
+                        </div>
+                        <div class="flex flex-col flex-grow">
+                            <h5 class="text-xl font-bold tracking-tight">Measure (mobile app)</h5>
+                            <p class="font-normal text-xs opacity-80">thor-com-se.github.io/measure</p>
+                        </div>
+                        <img class="opacity-20 dark:hidden" src="resources/vectors/chevron-dark.svg" alt="" />
+                        <img class="opacity-40 hidden dark:block" src="resources/vectors/chevron.svg" alt="" />
                     </div>
-                    <img class="opacity-60 dark:opacity-60" src="resources/vectors/chevron.svg" alt="" />
-                </div>
-            </a>
-            <a target="_blank" href="https://thor-com-se.github.io/certificates"
-                class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
-                <img class="bg-white pt-4 pb-1 dark:py-4 w-full h-44 object-contain dark:opacity-90"
-                    src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~T4ENXQ7P4AG4/CERTIFICATE_LANDING_PAGE~T4ENXQ7P4AG4.jpeg"
-                    alt="" />
-                <div
-                    class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300">
-                    <div class="w-14 dark:opacity-90">
-                        <img src="resources/vectors/award.svg" alt="" />
-                    </div>
-                    <div class="flex flex-col flex-grow">
-                        <h5 class="text-xl font-bold tracking-tight">Professional certificates</h5>
-                        <p class="font-normal text-xs opacity-80">thor-com-se.github.io/certificates</p>
-                    </div>
-                    <img class="opacity-20 dark:hidden" src="resources/vectors/chevron-dark.svg" alt="" />
-                    <img class="opacity-40 hidden dark:block" src="resources/vectors/chevron.svg" alt="" />
-                </div>
-            </a>
-            <a target="_blank" href="https://apps.apple.com/developer/id1565563294"
-                class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
-                <img class="bg-[#0063cc] w-full h-44 object-cover pt-4"
-                    src="https://developer.apple.com/ios/planning/images/planning-ios-marker-large_2x.webp" alt="" />
-                <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#006fe6] text-white">
-                    <div class="w-14 dark:opacity-90">
-                        <img src="resources/vectors/appstore.svg" alt="" />
-                    </div>
-                    <div class="flex flex-col flex-grow">
-                        <h5 class="text-xl font-bold tracking-tight dark:opacity-90">App Store Developer</h5>
-                        <p class="font-normal text-xs opacity-80">apple.com/developer/id1565563294</p>
-                    </div>
-                    <img class="opacity-60 dark:opacity-60" src="resources/vectors/chevron.svg" alt="" />
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     </div>
 </body>
