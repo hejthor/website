@@ -33,6 +33,11 @@ function resizeImage(url, newHeight, callback, errorCallback) {
     };
 }
 
+function rgbToHex(rgb) {
+    const rgbArray = rgb.match(/\d+/g); // Extract the numbers from the RGB string
+    return rgbArray ? `#${rgbArray.map(x => parseInt(x).toString(16).padStart(2, '0')).join('')}` : null;
+}
+
 // Fetch the banners from the JSON file
 fetch('resources/banners.json')
     .then(response => response.json())
@@ -41,6 +46,11 @@ fetch('resources/banners.json')
             resizeImage(imageData.image, 400, function (resizedImageDataUrl) {
                 document.getElementById('banner-image').src = resizedImageDataUrl;
                 document.getElementById('banner-label').style.backgroundColor = imageData.color;
+                const hexColor = rgbToHex(imageData.color);
+                document.getElementById('banner-border').classList.add(
+                    `border-[${hexColor}]/10`,
+                    `dark:border-[${hexColor}]/40`
+                );
                 setTimeout(function () {
                     document.getElementById('banner').classList.remove('hidden');
                     const children = document.getElementById('content').children;
