@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark">
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="rgb(237, 237, 237)" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="rgb(10, 10, 10)" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
     <title>Hello, I'm Thor</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -24,10 +24,10 @@
     <link rel="stylesheet" href="resources/styles.css">
 </head>
 
-<body class="bg-[#ededed] dark:bg-neutral-950">
+<body class="bg-white dark:bg-black">
     <div class="flex flex-col items-center justify-center px-4 sm:px-0 pt-14 pb-20 sm:py-20 px-5h-screen">
         <div id="banner" class="hidden w-full grid sm:max-w-sm md:max-w-3xl fade-in-up">
-            <div class="rounded-lg overflow-hidden scale-up">
+            <div class="border-4 border-white dark:border-black rounded-lg overflow-hidden scale-up">
                 <div class="relative flex justify-center items-center">
                     <img id="banner-image" class="w-full h-60 md:h-72 object-cover dark:opacity-85" alt="" />
                     <img class="absolute h-auto size-36 rounded-full border-2 border-neutral-300"
@@ -48,7 +48,7 @@
             <div
                 class="hidden grid gap-5 pt-14 sm:max-w-sm md:max-w-3xl sm:grid-cols-1 md:grid-cols-2 fade-in-up">
                 <a target="_blank" href="https://www.instagram.com/thor.com.se"
-                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    class="border-4 border-[#ac3958]/10 hover:border-[#ac3958]/30 dark:border-[#ac3958]/40 dark:hover:border-[#ac3958]/60 rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
                     <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#ac3958] text-white">
                         <div class="w-14 dark:opacity-90">
                             <img src="resources/vectors/instagram.svg" alt="" />
@@ -61,7 +61,7 @@
                     </div>
                 </a>
                 <a target="_blank" href="https://www.x.com/thor_com_se"
-                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    class="border-4 border-[#15202B]/10 hover:border-[#15202B]/30 dark:border-[#15202B]/70 dark:hover:border-[#15202B]/90 rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
                     <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#15202B] dark:bg-[#1b2836] text-white">
                         <div class="w-14 dark:opacity-90">
                             <img src="resources/vectors/x.svg" alt="" />
@@ -74,7 +74,7 @@
                     </div>
                 </a>
                 <a target="_blank" href="https://worldofwarcraft.blizzard.com/en-us/character/us/fizzcrank/thorr"
-                    class="sm:hidden rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    class="sm:hidden border-4 border-[#F4BF2A]/15 hover:border-[#F4BF2A]/30 dark:border-[#F4BF2A]/15 dark:hover:border-[#F4BF2A]/20 rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
                     <div class="relative">
                         <img class="w-full h-44 object-cover"
                             src="https://render-eu.worldofwarcraft.com/profile-backgrounds/v2/armory_bg_class_shaman.jpg"
@@ -95,7 +95,7 @@
                     </div>
                 </a>
                 <a target="_blank" href="https://github.com/thor-com-se"
-                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    class="border-4 border-[#544072]/10 hover:border-[#544072]/30 dark:border-[#544072]/50 dark:hover:border-[#544072]/70 rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
                     <div class="pb-2 w-full h-44 bg-[#544072] flex items-center justify-center overflow-hidden">
                         <div class="calendar max-w-full max-h-full flex items-center justify-end p-5"></div>
                     </div>
@@ -116,7 +116,7 @@
                     </div>
                 </a>
                 <a target="_blank" href="https://worldofwarcraft.blizzard.com/en-us/character/us/fizzcrank/thorr"
-                    class="hidden sm:block rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    class="hidden sm:block border-4 border-[#F4BF2A]/15 hover:border-[#F4BF2A]/30 dark:border-[#F4BF2A]/15 dark:hover:border-[#F4BF2A]/20 rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
                     <div class="relative">
                         <img class="w-full h-44 object-cover"
                             src="https://render-eu.worldofwarcraft.com/profile-backgrounds/v2/armory_bg_class_shaman.jpg"
@@ -137,12 +137,12 @@
                     </div>
                 </a>
                 <a target="_blank" href="https://thor-com-se.github.io/certificates"
-                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
-                    <img class="bg-white pt-4 pb-1 dark:py-4 w-full h-44 object-contain dark:opacity-90"
+                    class="border-4 border-neutral-100/60 hover:border-neutral-100/80 dark:border-neutral-800/65 dark:hover:border-neutral-800/75 rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    <img class="bg-white py-4 w-full h-44 object-contain dark:opacity-90"
                         src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~T4ENXQ7P4AG4/CERTIFICATE_LANDING_PAGE~T4ENXQ7P4AG4.jpeg"
                         alt="" />
                     <div
-                        class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300">
+                        class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300">
                         <div class="w-14 dark:opacity-90">
                             <img src="resources/vectors/award.svg" alt="" />
                         </div>
@@ -155,7 +155,7 @@
                     </div>
                 </a>
                 <a target="_blank" href="https://apps.apple.com/developer/id1565563294"
-                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    class="border-4 border-[#0063cc]/10 hover:border-[#0063cc]/30 dark:border-[#0063cc]/40 dark:hover:border-[#0063cc]/60 rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
                     <img class="bg-[#0063cc] w-full h-44 object-cover pt-4"
                         src="https://developer.apple.com/ios/planning/images/planning-ios-marker-large_2x.webp"
                         alt="" />
@@ -174,7 +174,7 @@
             <div
                 class="hidden grid gap-5 pt-14 sm:max-w-sm md:max-w-3xl sm:grid-cols-1 md:grid-cols-2 fade-in-up">
                 <a target="_blank" href="https://github.com/thor-com-se/open-links-excel"
-                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    class="border-4 border-[#1e673f]/10 hover:border-[#1e673f]/30 dark:border-[#1e673f]/40 dark:hover:border-[#1e673f]/60 rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
                     <img class="bg-[#1e673f] px-4 pt-3 object-top w-full h-44 object-cover dark:opacity-90"
                         src="https://github.com/thor-com-se/open-links-excel/raw/main/image-userform.png" alt="" />
                     <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#217346] text-white">
@@ -189,7 +189,7 @@
                     </div>
                 </a>
                 <a target="_blank" href="https://github.com/thor-com-se/copy-from-excel"
-                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    class="border-4 border-[#1e673f]/10 hover:border-[#1e673f]/30 dark:border-[#1e673f]/40 dark:hover:border-[#1e673f]/60 rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
                     <img class="bg-[#1e673f] px-4 pt-3 object-top w-full h-44 object-cover dark:opacity-90"
                         src="https://github.com/thor-com-se/copy-from-excel/raw/main/image-userform.png" alt="" />
                     <div class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-[#217346] text-white">
@@ -204,11 +204,11 @@
                     </div>
                 </a>
                 <a target="_blank" href="https://github.com/thor-com-se/playscript"
-                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
-                    <img class="bg-neutral-300 dark:bg-neutral-800 px-4 pt-4 object-top w-full h-44 object-cover dark:opacity-90"
+                    class="border-4 border-neutral-100/60 hover:border-neutral-100/80 dark:border-neutral-800/65 dark:hover:border-neutral-800/75 rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    <img class="bg-white dark:bg-neutral-800 px-4 pt-4 object-top w-full h-44 object-cover dark:opacity-90"
                         src="https://thor-com-se.github.io/playscript/desktop.png" alt="" />
                     <div
-                        class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300">
+                        class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300">
                         <div class="w-14 dark:opacity-90">
                             <img class="dark:hidden" src="resources/vectors/gamepad.svg" alt="" />
                             <img class="hidden dark:block" src="resources/vectors/gamepad-dark.svg" alt="" />
@@ -222,11 +222,11 @@
                     </div>
                 </a>
                 <a target="_blank" href="https://github.com/thor-com-se/measure"
-                    class="rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
-                    <img class="bg-neutral-300 dark:bg-neutral-800 py-4 w-full h-44 object-contain dark:opacity-90"
+                    class="border-4 border-neutral-100/60 hover:border-neutral-100/80 dark:border-neutral-800/65 dark:hover:border-neutral-800/75 rounded-lg overflow-hidden sm:hover:scale-[1.02] sm:active:scale-[1] ease-out duration-200">
+                    <img class="bg-white dark:bg-neutral-800 py-4 w-full h-44 object-contain dark:opacity-90"
                         src="https://thor-com-se.github.io/measure/preview-light.png" alt="" />
                     <div
-                        class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300">
+                        class="flex items-center py-3 sm:py-4 ps-4 pe-5 bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300">
                         <div class="w-14 dark:opacity-90">
                             <img class="dark:hidden" src="resources/vectors/mobile.svg" alt="" />
                             <img class="hidden dark:block" src="resources/vectors/mobile-dark.svg" alt="" />
