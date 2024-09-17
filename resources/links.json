@@ -1,0 +1,37 @@
+[
+    {
+        "link": "https://www.instagram.com/thor.com.se",
+        "icon": "resources/vectors/instagram.svg",
+        "color": "#ac3958"
+    },
+    {
+        "link": "https://www.x.com/thor_com_se",
+        "icon": "resources/vectors/x.svg",
+        "color": "#15202B"
+    },
+    {
+        "link": "https://github.com/thor-com-se",
+        "icon": "resources/vectors/github.svg",
+        "color": "#544072"
+    },
+    {
+        "link": "https://worldofwarcraft.blizzard.com/en-us/character/us/fizzcrank/thorr",
+        "icon": "resources/vectors/warcraft.svg",
+        "color": "#2B374C"
+    },
+    {
+        "link": "https://thor-com-se.github.io/certificates",
+        "icon": "resources/vectors/award.svg",
+        "color": "#0081FB"
+    },
+    {
+        "link": "https://github.com/thor-com-se/playscript",
+        "icon": "resources/vectors/gamepad.svg",
+        "color": "green"
+    },
+    {
+        "link": "https://github.com/thor-com-se/measure",
+        "icon": "resources/vectors/mobile.svg",
+        "color": "gray"
+    }
+]

@@ -1,1 +1,0 @@
-GitHubCalendar(".calendar", "thor-com-se", { responsive: true, tooltips: false, global_stats: false });
