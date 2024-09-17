@@ -18,7 +18,7 @@ function adjustGridPadding() {
 
             // Ensure only one top- class is applied
             image.classList.add("sticky");
-            image.classList.remove(...Array.from(image.classList).filter(c => c.startsWith('top-')));
+            image.classList.remove(...Array.from(image.classList).filter(c => c.startsWith("top-")));
             image.classList.add(`top-[${paddingTop}px]`);
 
         }
@@ -30,7 +30,7 @@ function adjustGridPadding() {
         if (image) {
             // Remove the sticky class and top-[paddingTop] class
             image.classList.remove("sticky");
-            image.classList.remove(...Array.from(image.classList).filter(c => c.startsWith('top-')));
+            image.classList.remove(...Array.from(image.classList).filter(c => c.startsWith("top-")));
         }
     }
 }
