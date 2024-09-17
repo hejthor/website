@@ -1,5 +1,7 @@
 // Function to adjust the grid padding based on the image height and viewport height
 function adjustGridPadding() {
+    document.getElementById("container").classList.remove("hidden");
+    
     const image = document.getElementById("thor-image");
     const gridContainer = document.getElementById("grid-container");
     
