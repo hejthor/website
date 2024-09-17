@@ -19,7 +19,7 @@ async function renderLinks() {
             const img = document.createElement("img");
             img.src = icon;
             img.alt = "Icon";
-            img.className = "w-14 md:w-10 object-contain";
+            img.className = "w-16 md:w-10 object-contain";
             anchor.appendChild(img);
         }
 
