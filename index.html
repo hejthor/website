@@ -18,16 +18,17 @@
     <script src="resources/renderLinks.js"></script>
     <script src="resources/adjustGridPadding.js"></script>
     <script defer>
+        window.addEventListener("load", adjustGridPadding);
+        window.addEventListener("resize", adjustGridPadding);
         renderLinks();
-        window.addEventListener('load', adjustGridPadding);
-        window.addEventListener('resize', adjustGridPadding);
+        document.getElementById("container").classList.remove("hidden");
     </script>
 </head>
 
 <body class="bg-white dark:bg-black">
     
     <!-- Layout with two stacked columns on mobile and two side by side on desktop -->
-    <div class="container mx-auto max-w-screen-md">
+    <div id="container" class="container mx-auto max-w-screen-md hidden">
         <div id="grid-container" class="grid grid-cols-1 md:grid-cols-2 md:gap-0 w-full">
 
             <!-- Column 1: Square image with ID added for selection in JS -->
