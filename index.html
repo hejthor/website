@@ -18,10 +18,9 @@
     <script src="resources/renderLinks.js"></script>
     <script src="resources/adjustGridPadding.js"></script>
     <script defer>
+        renderLinks();
         window.addEventListener("load", adjustGridPadding);
         window.addEventListener("resize", adjustGridPadding);
-        renderLinks();
-        document.getElementById("container").classList.remove("hidden");
     </script>
 </head>
 
