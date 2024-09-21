@@ -11,7 +11,7 @@ async function renderLinks() {
         const anchor = document.createElement("a");
         anchor.href = link;
         anchor.target = "_blank";
-        anchor.className = "block w-full aspect-[3/1] md:aspect-[4/1] flex justify-center items-center";
+        anchor.className = "block w-full aspect-[3/1] flex justify-center items-center";
         anchor.style.backgroundColor = color;
 
         // Create img element if icon exists
