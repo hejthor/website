@@ -2,36 +2,45 @@
     {
         "link": "https://www.instagram.com/thor.com.se",
         "icon": "resources/vectors/instagram.svg",
-        "color": "#ac3958"
+        "color": "#ac3958",
+        "aspect": "3/1"
     },
     {
         "link": "https://www.x.com/thor_com_se",
         "icon": "resources/vectors/x.svg",
-        "color": "#15202B"
+        "color": "#15202B",
+        "aspect": "3/1"
     },
     {
         "link": "https://github.com/thor-com-se",
         "icon": "resources/vectors/github.svg",
-        "color": "#544072"
+        "color": "#544072",
+        "aspect": "3/1"
     },
     {
         "link": "https://worldofwarcraft.blizzard.com/en-us/character/us/fizzcrank/thorr",
-        "icon": "resources/vectors/warcraft.svg",
-        "color": "#2B374C"
+        "images": [
+            "https://render-eu.worldofwarcraft.com/profile-backgrounds/v2/armory_bg_class_shaman.jpg",
+            "https://render.worldofwarcraft.com/us/character/fizzcrank/179/241366451-main-raw.png"
+        ],
+        "aspect": "1"
     },
     {
         "link": "https://thor-com-se.github.io/certificates",
         "icon": "resources/vectors/award.svg",
-        "color": "#0081FB"
+        "color": "#0081FB",
+        "aspect": "3/1"
     },
     {
         "link": "https://github.com/thor-com-se/playscript",
         "icon": "resources/vectors/gamepad.svg",
-        "color": "green"
+        "color": "green",
+        "aspect": "3/1"
     },
     {
         "link": "https://github.com/thor-com-se/measure",
         "icon": "resources/vectors/mobile.svg",
-        "color": "gray"
+        "color": "gray",
+        "aspect": "3/1"
     }
 ]
