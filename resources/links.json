@@ -23,7 +23,8 @@
             "https://render-eu.worldofwarcraft.com/profile-backgrounds/v2/armory_bg_class_shaman.jpg",
             "https://render.worldofwarcraft.com/us/character/fizzcrank/179/241366451-main-raw.png"
         ],
-        "aspect": "1"
+        "aspect": "1",
+        "scale": "1.3"
     },
     {
         "link": "https://thor-com-se.github.io/certificates",
