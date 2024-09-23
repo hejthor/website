@@ -39,7 +39,7 @@ async function renderLinks() {
             const img = document.createElement("img");
             img.src = icon;
             img.alt = "Icon";
-            img.className = "w-14 md:w-10 object-contain relative z-10"; // Make sure icon is on top
+            img.className = "w-14 md:w-12 object-contain relative z-10"; // Make sure icon is on top
             anchor.appendChild(img);
         }
 
