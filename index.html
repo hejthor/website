@@ -22,29 +22,12 @@
         window.addEventListener("load", adjustGridPadding);
         window.addEventListener("resize", adjustGridPadding);
     </script>
-
-    <style>
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 1s ease forwards;
-        }
-    </style>
 </head>
 
 <body class="bg-white dark:bg-black">
     
     <!-- Layout with two stacked columns on mobile and two side by side on desktop -->
-    <div id="container" class="container mx-auto max-w-screen-md hidden fade-in-up">
+    <div id="container" class="container mx-auto max-w-screen-md hidden">
         <div id="grid-container" class="grid grid-cols-1 md:grid-cols-2 md:gap-0 w-full">
 
             <!-- Column 1: Square image with ID added for selection in JS -->
