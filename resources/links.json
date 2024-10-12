@@ -24,24 +24,23 @@
             "https://render.worldofwarcraft.com/us/character/fizzcrank/179/241366451-main-raw.png"
         ],
         "aspect": "1",
-        "scale": "1.3"
+        "scale": "1.8"
     },
     {
-        "link": "https://thor-com-se.github.io/certificates",
-        "icon": "resources/vectors/award.svg",
-        "color": "#0081FB",
-        "aspect": "3/1"
+        "link": "https://github.com/thor-com-se/resume-template",
+        "images": [
+            "https://github.com/thor-com-se/resume-template/raw/main/pdf.png"
+        ],
+        "aspect": "1",
+        "scale": "0.85"
     },
     {
-        "link": "https://github.com/thor-com-se/playscript",
-        "icon": "resources/vectors/gamepad.svg",
-        "color": "green",
-        "aspect": "3/1"
-    },
-    {
-        "link": "https://github.com/thor-com-se/measure",
-        "icon": "resources/vectors/mobile.svg",
-        "color": "gray",
-        "aspect": "3/1"
+        "link": "https://github.com/thor-com-se/diagrams",
+        "images": [
+            "https://github.com/thor-com-se/diagrams/releases/latest/download/Activity_Diagram.png"
+        ],
+        "color": "white",
+        "aspect": "1",
+        "scale": "0.75"
     }
 ]

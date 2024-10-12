@@ -16,19 +16,29 @@ async function renderLinks() {
         // Use background color if provided
         if (color) {
             anchor.style.backgroundColor = color;
+        } else {
+            anchor.classList.add('bg-neutral-200', 'dark:bg-neutral-900');
         }
 
         // If backgrounds are provided, stack them
         if (images && images.length > 0) {
             images.forEach((background, index) => {
                 const bgDiv = document.createElement("div");
-                bgDiv.className = "absolute top-0 left-0 w-full h-full bg-cover bg-center";
+                bgDiv.className = "absolute top-0 left-0 w-full h-full bg-center bg-no-repeat";
                 bgDiv.style.backgroundImage = `url(${background})`;
                 bgDiv.style.zIndex = index;  // Ensure that the second image is on top of the first
+                
+                // Maintain aspect ratio and scale image
+                bgDiv.style.backgroundSize = "contain";  // Ensure the image maintains its aspect ratio
+                bgDiv.style.backgroundPosition = "center center";  // Center the image
+
+                // Apply scaling without distorting aspect ratio
                 if (scale) {
-                    bgDiv.style.transform = `scale(${scale})`; // Apply scaling factor to the background images
+                    bgDiv.style.width = `${100 * scale}%`;  // Scale width based on the scale factor
+                    bgDiv.style.height = `${100 * scale}%`;  // Scale height based on the scale factor
+                    bgDiv.style.top = `${(100 - 100 * scale) / 2}%`;  // Adjust top position to center vertically
+                    bgDiv.style.left = `${(100 - 100 * scale) / 2}%`;  // Adjust left position to center horizontally
                 }
-                bgDiv.style.transformOrigin = "center center";  // Ensure scaling happens from the center
 
                 anchor.appendChild(bgDiv);
             });
