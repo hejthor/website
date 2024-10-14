@@ -4,7 +4,7 @@ async function renderLinks() {
     const links = await response.json();
     const linksColumn = document.getElementById("links-column");
 
-    links.forEach(linkObj => {
+    links.forEach((linkObj, index) => {  // Add index as a parameter
         const { link, icon, color, images, aspect, scale } = linkObj;
 
         // Create anchor element
@@ -17,7 +17,10 @@ async function renderLinks() {
         if (color) {
             anchor.style.backgroundColor = color;
         } else {
-            anchor.classList.add('bg-neutral-200', 'dark:bg-neutral-900');
+            // Alternate background classes based on index
+            const lightBgClass = index % 2 === 0 ? 'bg-[#f5f5f5]' : 'bg-[#ededed]';
+            const darkBgClass = index % 2 === 0 ? 'dark:bg-[#161616]' : 'dark:bg-[#1c1c1c]';
+            anchor.classList.add(lightBgClass, darkBgClass);
         }
 
         // If backgrounds are provided, stack them
