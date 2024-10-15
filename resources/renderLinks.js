@@ -31,16 +31,19 @@ async function renderLinks() {
                 bgDiv.style.backgroundImage = `url(${background})`;
                 bgDiv.style.zIndex = index;  // Ensure that the second image is on top of the first
                 
-                // Maintain aspect ratio and scale image
+                // Maintain aspect ratio and scale image based on container width
                 bgDiv.style.backgroundSize = "contain";  // Ensure the image maintains its aspect ratio
                 bgDiv.style.backgroundPosition = "center center";  // Center the image
 
-                // Apply scaling without distorting aspect ratio
+                // Apply scaling based on percentage of container width
                 if (scale) {
-                    bgDiv.style.width = `${100 * scale}%`;  // Scale width based on the scale factor
-                    bgDiv.style.height = `${100 * scale}%`;  // Scale height based on the scale factor
-                    bgDiv.style.top = `${(100 - 100 * scale) / 2}%`;  // Adjust top position to center vertically
-                    bgDiv.style.left = `${(100 - 100 * scale) / 2}%`;  // Adjust left position to center horizontally
+                    const widthPercentage = scale;  // Scale width as a percentage of container width
+                    const heightPercentage = (widthPercentage / aspect) * 100;  // Calculate height based on aspect ratio
+
+                    bgDiv.style.width = `${widthPercentage * 100}%`;  // Set width as percentage of container width
+                    bgDiv.style.height = `${heightPercentage * 100}%`;  // Set height based on aspect ratio
+                    bgDiv.style.top = `${(100 - heightPercentage * 100) / 2}%`;  // Adjust top position to center vertically
+                    bgDiv.style.left = `${(100 - widthPercentage * 100) / 2}%`;  // Adjust left position to center horizontally
                 }
 
                 anchor.appendChild(bgDiv);
