@@ -12,7 +12,7 @@
         "aspect": "3/1"
     },
     {
-        "link": "https://github.com/thor-com-se",
+        "link": "https://github.com/thor-se",
         "icon": "resources/vectors/github.svg",
         "color": "#544072",
         "aspect": "3/1"
@@ -27,17 +27,17 @@
         "scale": "1.8"
     },
     {
-        "link": "https://github.com/thor-com-se/diagrams",
+        "link": "https://github.com/thor-se/diagrams",
         "images": [
-            "https://github.com/thor-com-se/diagrams/releases/latest/download/Activity_Diagram.png"
+            "https://github.com/thor-se/diagrams/releases/latest/download/Activity_Diagram.png"
         ],
         "aspect": "1",
         "scale": "0.65"
     },
     {
-        "link": "https://github.com/thor-com-se/resume-template",
+        "link": "https://github.com/thor-se/resume-template",
         "images": [
-            "https://github.com/thor-com-se/resume-template/raw/main/pdf.png"
+            "https://github.com/thor-se/resume-template/raw/main/pdf.png"
         ],
         "aspect": "1",
         "scale": "0.65"
