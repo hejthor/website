@@ -1,18 +1,18 @@
 [
     {
-        "link": "https://www.instagram.com/thor.com.se",
+        "link": "https://www.instagram.com/hejthor",
         "icon": "resources/vectors/instagram.svg",
         "color": "#ac3958",
         "aspect": "3/1"
     },
     {
-        "link": "https://www.x.com/thor_sverige",
+        "link": "https://www.x.com/fuckthor",
         "icon": "resources/vectors/x.svg",
         "color": "#15202B",
         "aspect": "3/1"
     },
     {
-        "link": "https://github.com/thor-se",
+        "link": "https://github.com/hejthor",
         "icon": "resources/vectors/github.svg",
         "color": "#544072",
         "aspect": "3/1"
@@ -27,17 +27,17 @@
         "scale": "1.8"
     },
     {
-        "link": "https://github.com/thor-se/diagrams",
+        "link": "https://github.com/hejthor/diagrams",
         "images": [
-            "https://github.com/thor-se/diagrams/releases/latest/download/Activity_Diagram.png"
+            "https://github.com/hejthor/diagrams/releases/latest/download/Activity_Diagram.png"
         ],
         "aspect": "1",
         "scale": "0.65"
     },
     {
-        "link": "https://github.com/thor-se/resume-template",
+        "link": "https://github.com/hejthor/resume-template",
         "images": [
-            "https://github.com/thor-se/resume-template/raw/main/pdf.png"
+            "https://github.com/hejthor/resume-template/raw/main/pdf.png"
         ],
         "aspect": "1",
         "scale": "0.65"
