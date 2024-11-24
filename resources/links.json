@@ -1,14 +1,14 @@
 [
     {
-        "link": "https://www.instagram.com/hejthor",
-        "icon": "resources/vectors/instagram.svg",
-        "color": "#ac3958",
+        "link": "https://github.com/hejthor",
+        "icon": "resources/vectors/threads.svg",
+        "color": "#181818",
         "aspect": "3/1"
     },
     {
-        "link": "https://www.x.com/fuckthor",
-        "icon": "resources/vectors/x.svg",
-        "color": "#15202B",
+        "link": "https://www.instagram.com/hejthor",
+        "icon": "resources/vectors/instagram.svg",
+        "color": "#ac3958",
         "aspect": "3/1"
     },
     {
