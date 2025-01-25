@@ -18,13 +18,13 @@
         "aspect": "3/1"
     },
     {
-        "link": "https://worldofwarcraft.blizzard.com/en-us/character/us/fizzcrank/thorr",
+        "link": "https://worldofwarcraft.blizzard.com/en-gb/character/eu/ravencrest/thoralfen",
         "images": [
-            "https://render-eu.worldofwarcraft.com/profile-backgrounds/v2/armory_bg_class_shaman.jpg",
-            "https://render.worldofwarcraft.com/us/character/fizzcrank/179/241366451-main-raw.png"
+            "https://render.worldofwarcraft.com/profile-backgrounds/v2/armory_bg_class_druid.jpg",
+            "https://render.worldofwarcraft.com/eu/character/ravencrest/153/174053785-main-raw.png"
         ],
         "aspect": "1",
-        "scale": "1.8"
+        "scale": "2"
     },
     {
         "link": "https://github.com/hejthor/diagrams",
