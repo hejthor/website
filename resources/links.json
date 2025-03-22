@@ -1,11 +1,5 @@
 [
     {
-        "link": "https://www.threads.net/@hejthor",
-        "icon": "resources/vectors/threads.svg",
-        "color": "#181818",
-        "aspect": "3/1"
-    },
-    {
         "link": "https://www.instagram.com/hejthor",
         "icon": "resources/vectors/instagram.svg",
         "color": "#ac3958",
@@ -15,6 +9,12 @@
         "link": "https://github.com/hejthor",
         "icon": "resources/vectors/github.svg",
         "color": "#544072",
+        "aspect": "3/1"
+    },
+    {
+        "link": "https://www.threads.net/@hejthor",
+        "icon": "resources/vectors/threads.svg",
+        "color": "#181818",
         "aspect": "3/1"
     },
     {
