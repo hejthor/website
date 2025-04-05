@@ -29,7 +29,7 @@ async function renderLinks() {
                 // Create a grid layout for the images in the "album" style
                 const columnCount = 3;
                 const gridContainer = document.createElement("div");
-                gridContainer.className = `grid grid-cols-${columnCount} w-full gap-0.5 bg-black`;
+                gridContainer.className = `grid grid-cols-${columnCount} w-full gap-0.5`;
 
                 images.forEach((image, imageIndex) => {
                     const imganchor = document.createElement("a");
