@@ -1,45 +1,46 @@
 [
     {
-        "link": "https://www.instagram.com/hejthor",
-        "icon": "resources/vectors/instagram.svg",
-        "color": "#ac3958",
-        "aspect": "3/1"
-    },
-    {
         "link": "https://github.com/hejthor",
         "icon": "resources/vectors/github.svg",
+        "images": [
+            "https://ghchart.rshah.org/hejthor"
+        ],
+        "image-align": "right",
+        "icon-scale": "12",
         "color": "#544072",
-        "aspect": "3/1"
-    },
-    {
-        "link": "https://www.threads.net/@hejthor",
-        "icon": "resources/vectors/threads.svg",
-        "color": "#181818",
-        "aspect": "3/1"
+        "aspect": "1",
+        "scale": "4"
     },
     {
         "link": "https://worldofwarcraft.blizzard.com/en-gb/character/eu/ravencrest/thorkan",
+        "icon": "resources/vectors/warcraft.svg",
         "images": [
             "https://render.worldofwarcraft.com/profile-backgrounds/v2/armory_bg_class_shaman.jpg",
             "https://render.worldofwarcraft.com/eu/character/ravencrest/141/174054029-main-raw.png"
         ],
+        "style": "layered",
         "aspect": "1",
         "scale": "1.75"
     },
     {
-        "link": "https://github.com/hejthor/diagrams",
         "images": [
-            "https://github.com/hejthor/diagrams/releases/latest/download/Activity_Diagram.png"
+            "resources/images/399680263_890265385799600_8675289362411579293_n..jpg",
+            "resources/images/434365351_3743674642577160_8537504429732552885_n..jpg",
+            "resources/images/435855886_942789827266701_5439602917142688136_n..jpg",
+            "resources/images/458391812_1251609739529540_2224289795056974590_n..jpg",
+            "resources/images/458583077_525902076589204_771478793374044172_n..jpg",
+            "resources/images/458609980_793069486237574_8181177455341134012_n..jpg",
+            "resources/images/462399805_457293490676373_2254158587472260823_n..jpg",
+            "resources/images/458609980_793069486237574_8181177455341134012_n..jpg",
+            "resources/images/462399805_457293490676373_2254158587472260823_n..jpg",
+            "resources/images/458391812_1251609739529540_2224289795056974590_n..jpg",
+            "resources/images/458583077_525902076589204_771478793374044172_n..jpg",
+            "resources/images/434365351_3743674642577160_8537504429732552885_n..jpg",
+            "resources/images/435855886_942789827266701_5439602917142688136_n..jpg",
+            "resources/images/458391812_1251609739529540_2224289795056974590_n..jpg"
         ],
-        "aspect": "1",
-        "scale": "0.65"
-    },
-    {
-        "link": "https://github.com/hejthor/resume-template",
-        "images": [
-            "https://github.com/hejthor/resume-template/raw/main/pdf.png"
-        ],
-        "aspect": "1",
-        "scale": "0.65"
+        "style": "album",
+        "aspect": "4/5",
+        "scale": "1.75"
     }
 ]

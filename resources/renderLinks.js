@@ -11,7 +11,7 @@ async function renderLinks() {
         const anchor = document.createElement("a");
         anchor.href = link;
         anchor.target = "_blank";
-        anchor.className = `block w-full aspect-[${aspect}] flex justify-center items-center relative overflow-hidden`;
+        anchor.className =linkObj.style == "album" ? `block w-full flex justify-center items-center relative overflow-hidden` : `block w-full aspect-[${aspect}] flex justify-center items-center relative overflow-hidden`;
 
         // Use background color if provided
         if (color) {
@@ -23,31 +23,53 @@ async function renderLinks() {
             anchor.classList.add(lightBgClass, darkBgClass);
         }
 
-        // If backgrounds are provided, stack them
+        // Handle images in anchor element
         if (images && images.length > 0) {
-            images.forEach((background, index) => {
-                const bgDiv = document.createElement("div");
-                bgDiv.className = "absolute top-0 left-0 w-full h-full bg-center bg-no-repeat";
-                bgDiv.style.backgroundImage = `url(${background})`;
-                bgDiv.style.zIndex = index;  // Ensure that the second image is on top of the first
-                
-                // Maintain aspect ratio and scale image based on container width
-                bgDiv.style.backgroundSize = "contain";  // Ensure the image maintains its aspect ratio
-                bgDiv.style.backgroundPosition = "center center";  // Center the image
+            if (linkObj.style === 'album') {
+                // Create a grid layout for the images in the "album" style
+                const columnCount = 2;
+                const gridContainer = document.createElement("div");
+                gridContainer.className = `grid grid-cols-${columnCount} w-full`;
 
-                // Apply scaling based on percentage of container width
-                if (scale) {
-                    const widthPercentage = scale;  // Scale width as a percentage of container width
-                    const heightPercentage = (widthPercentage / aspect) * 100;  // Calculate height based on aspect ratio
+                images.forEach((image, imageIndex) => {
+                    const img = document.createElement("img");
+                    img.src = image;
+                    img.alt = `Image ${imageIndex + 1}`;
+                    img.className = `w-full h-auto object-cover aspect-[${aspect}]`;  // Apply aspect to the image
 
-                    bgDiv.style.width = `${widthPercentage * 100}%`;  // Set width as percentage of container width
-                    bgDiv.style.height = `${heightPercentage * 100}%`;  // Set height based on aspect ratio
-                    bgDiv.style.top = `${(100 - heightPercentage * 100) / 2}%`;  // Adjust top position to center vertically
-                    bgDiv.style.left = `${(100 - widthPercentage * 100) / 2}%`;  // Adjust left position to center horizontally
-                }
+                    gridContainer.appendChild(img);
+                });
 
-                anchor.appendChild(bgDiv);
-            });
+                anchor.appendChild(gridContainer);
+            } else {
+                // Layered style
+                images.forEach((background, index) => {
+                    const bgDiv = document.createElement("div");
+                    bgDiv.className = "absolute top-0 left-0 w-full h-full bg-center bg-no-repeat";
+                    bgDiv.style.backgroundImage = `url(${background})`;
+                    bgDiv.style.zIndex = index;
+
+                    bgDiv.style.backgroundSize = "contain";
+                    bgDiv.style.backgroundPosition = "center center";
+
+                    if (scale) {
+                        const widthPercentage = scale;
+                        const heightPercentage = (widthPercentage / aspect) * 100;
+
+                        bgDiv.style.width = `${widthPercentage * 100}%`;
+                        bgDiv.style.height = `${heightPercentage * 100}%`;
+                        bgDiv.style.top = `${(100 - heightPercentage * 100) / 2}%`;
+                        bgDiv.style.left = `${(100 - widthPercentage * 100) / 2}%`;
+                    }
+
+                    anchor.appendChild(bgDiv);
+                });
+            }
+        }
+
+        // Disable anchor if no link exists
+        if (!link) {
+            anchor.style.pointerEvents = "none";  // Disable clicks on anchor
         }
 
         // Create img element if icon exists
@@ -55,7 +77,12 @@ async function renderLinks() {
             const img = document.createElement("img");
             img.src = icon;
             img.alt = "Icon";
-            img.className = "w-14 md:w-12 object-contain relative z-10"; // Make sure icon is on top
+            // Check for icon-scale and apply it if present, default to 14 if not
+            const iconScale = linkObj['icon-scale'] || 14; // Default to 14 if icon-scale is not provided
+            const scaleDifference = (14 - iconScale) / 2;
+            const marginRight = 3 + scaleDifference; // Subtract half the difference from 4
+
+            img.className = `w-${iconScale} object-contain absolute top-0 right-0 mt-4 mr-${marginRight} z-10`; // Position icon bottom-right with margin
             anchor.appendChild(img);
         }
 
