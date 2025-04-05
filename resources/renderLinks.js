@@ -1,3 +1,12 @@
+// Fix iOS Safari 100vh issue by calculating actual viewport height
+function updateViewportHeight() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+window.addEventListener('resize', updateViewportHeight);
+window.addEventListener('orientationchange', updateViewportHeight);
+updateViewportHeight(); // Run on initial load
+
 // Function to render links
 async function renderLinks() {
     const response = await fetch("resources/links.json");
@@ -34,9 +43,8 @@ async function renderLinks() {
                         overlay.style.position = "fixed";
                         overlay.style.top = "0";
                         overlay.style.left = "0";
-                        overlay.style.minHeight = "-webkit-fill-available";
+                        overlay.style.height = `calc(var(--vh, 1vh) * 100)`;
                         overlay.style.width = "100vw";
-                        overlay.style.height = "100vh";
                         overlay.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
                         overlay.style.zIndex = "1000";
                         overlay.style.display = "flex";
