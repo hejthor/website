@@ -25,16 +25,15 @@
 </head>
 
 <body class="bg-white dark:bg-black">
-    
     <!-- Layout with two stacked columns on mobile and two side by side on desktop -->
-    <div id="container" class="container mx-auto max-w-screen-md hidden">
-        <div id="grid-container" class="grid grid-cols-1 md:grid-cols-2 gap-0.5 w-full">
+    <div id="container" class="container mx-auto max-w-screen-md xl:max-w-screen-xl hidden">
+        <div id="grid-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-0.5 md:gap-5 w-full">
 
             <!-- Column 1: Square image with ID added for selection in JS -->
-            <img id="thor-image" src="resources/images/thor.jpg" class="w-full aspect-square object-cover">
+            <img id="thor-image" src="resources/images/thor.jpg" class="w-full aspect-square object-cover col-span-1">
 
             <!-- Column 2: Links with dynamic icons -->
-            <div id="links-column">
+            <div id="links-column" class="xl:col-span-2 col-span-1 grid">
             </div>
         </div>
     </div>
