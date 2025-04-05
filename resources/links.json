@@ -2,10 +2,6 @@
     {
         "link": "https://github.com/hejthor",
         "icon": "resources/vectors/github.svg",
-        "images": [
-            "https://ghchart.rshah.org/hejthor"
-        ],
-        "image-align": "right",
         "icon-scale": "12",
         "color": "#544072",
         "aspect": "1",
