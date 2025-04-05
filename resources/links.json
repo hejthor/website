@@ -1,13 +1,5 @@
 [
     {
-        "link": "https://github.com/hejthor",
-        "icon": "resources/vectors/github.svg",
-        "icon-scale": "12",
-        "color": "#544072",
-        "aspect": "1",
-        "scale": "4"
-    },
-    {
         "link": "https://worldofwarcraft.blizzard.com/en-gb/character/eu/ravencrest/thorkan",
         "icon": "resources/vectors/warcraft.svg",
         "images": [
@@ -15,8 +7,17 @@
             "https://render.worldofwarcraft.com/eu/character/ravencrest/141/174054029-main-raw.png"
         ],
         "style": "layered",
+        "icon-position": "corner",
         "aspect": "1",
         "scale": "1.75"
+    },
+    {
+        "link": "https://github.com/hejthor",
+        "icon": "resources/vectors/github.svg",
+        "icon-scale": "12",
+        "color": "#544072",
+        "aspect": "3/1",
+        "scale": "2"
     },
     {
         "images": [

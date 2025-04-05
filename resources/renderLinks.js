@@ -123,12 +123,21 @@ async function renderLinks() {
             const img = document.createElement("img");
             img.src = icon;
             img.alt = "Icon";
+
             // Check for icon-scale and apply it if present, default to 14 if not
             const iconScale = linkObj['icon-scale'] || 14; // Default to 14 if icon-scale is not provided
             const scaleDifference = (14 - iconScale) / 2;
             const marginRight = 3 + scaleDifference; // Subtract half the difference from 4
 
-            img.className = `w-${iconScale} object-contain absolute top-0 right-0 mt-${marginRight} mr-${marginRight} z-10`; // Position icon bottom-right with margin
+            // Determine icon position
+            if (linkObj["icon-position"] === "corner") {
+                // Position icon in the corner (as before)
+                img.className = `w-${iconScale} object-contain absolute top-0 right-0 mt-${marginRight} mr-${marginRight} z-10`; // Position icon bottom-right with margin
+            } else {
+                // Center the icon
+                img.className = `w-${iconScale} object-contain absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10`; // Center icon
+            }
+
             anchor.appendChild(img);
         }
 
