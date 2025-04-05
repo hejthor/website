@@ -34,9 +34,9 @@ async function renderLinks() {
                         overlay.style.position = "fixed";
                         overlay.style.top = "0";
                         overlay.style.left = "0";
+                        overlay.style.minHeight = "-webkit-fill-available";
                         overlay.style.width = "100vw";
                         overlay.style.height = "100vh";
-                        overlay.style.height = "-webkit-fill-available";
                         overlay.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
                         overlay.style.zIndex = "1000";
                         overlay.style.display = "flex";
