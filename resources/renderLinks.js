@@ -24,9 +24,7 @@ async function renderLinks() {
 
                 imganchor.addEventListener("click", (event) => {
                     event.preventDefault(); // Prevent the link from navigating
-                    
-                    // Disable page scrolling
-                    document.body.style.overflow = 'scroll'; // Keep the scrollbar visible
+
 
                     // Create the overlay div if it doesn't exist
                     let overlay = document.getElementById("image-overlay");
@@ -38,6 +36,7 @@ async function renderLinks() {
                         overlay.style.left = "0";
                         overlay.style.width = "100vw";
                         overlay.style.height = "100vh";
+                        overlay.style.height = "-webkit-fill-available";
                         overlay.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
                         overlay.style.zIndex = "1000";
                         overlay.style.display = "flex";
