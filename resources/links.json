@@ -1,25 +1,5 @@
 [
     {
-        "link": "https://worldofwarcraft.blizzard.com/en-gb/character/eu/ravencrest/thorkan",
-        "icon": "resources/vectors/warcraft.svg",
-        "images": [
-            "https://render.worldofwarcraft.com/profile-backgrounds/v2/armory_bg_class_shaman.jpg",
-            "https://render.worldofwarcraft.com/eu/character/ravencrest/141/174054029-main-raw.png"
-        ],
-        "style": "layered",
-        "icon-position": "corner",
-        "aspect": "1",
-        "scale": "1.75"
-    },
-    {
-        "link": "https://github.com/hejthor",
-        "icon": "resources/vectors/github.svg",
-        "icon-scale": "12",
-        "color": "#544072",
-        "aspect": "3/1",
-        "scale": "2"
-    },
-    {
         "images": [
             "resources/images/399680263_890265385799600_8675289362411579293_n..jpg",
             "resources/images/434365351_3743674642577160_8537504429732552885_n..jpg",
