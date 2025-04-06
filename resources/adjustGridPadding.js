@@ -8,7 +8,7 @@ function adjustGridPadding() {
     // Only apply the padding on desktop (md and larger screens)
     if (window.innerWidth >= 768) {
         if (image && gridContainer) {
-            const imageHeight = image.offsetHeight;
+            const imageHeight = image.getBoundingClientRect().height;
             const viewportHeight = window.innerHeight;
 
             // Calculate padding as (viewport height - image height) / 2

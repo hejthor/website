@@ -26,11 +26,20 @@
 
 <body class="bg-white dark:bg-black">
     <!-- Layout with two stacked columns on mobile and two side by side on desktop -->
-    <div id="container" class="container mx-auto max-w-screen-md xl:max-w-screen-xl hidden">
-        <div id="grid-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-0.5 md:gap-5 w-full">
-
+    <div id="container" class="container mx-auto max-w-screen-md xl:max-w-screen-xl hidden p-2.5 md:p-0">
+        <div id="grid-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5 md:gap-5 w-full">
             <!-- Column 1: Square image with ID added for selection in JS -->
-            <img id="thor-image" src="resources/images/thor.jpg" class="w-full aspect-square object-cover col-span-1">
+            <div id="thor-image" class="flex flex-col w-fit h-fit col-span-1 gap-2.5">
+                <img src="resources/images/thor.jpg" class="w-full aspect-square object-cover">
+                <div class="w-full grid grid-cols-2 gap-2.5 aspect-[7/1]">
+                    <a href="https://worldofwarcraft.blizzard.com/en-gb/character/eu/ravencrest/thorkan" target="_blank" class="w-full flex justify-center items-center relative overflow-hidden" style="background-color: #2B374C;">
+                        <img src="resources/vectors/warcraft.svg" class="w-10 object-contain relative z-10">
+                    </a>
+                    <a href="https://github.com/hejthor" target="_blank" class="w-full flex justify-center items-center relative overflow-hidden" style="background-color: #6e5494;">
+                        <img src="resources/vectors/github.svg" class="w-8 object-contain relative z-10">
+                    </a>
+                </div>
+            </div>
 
             <!-- Column 2: Links with dynamic icons -->
             <div id="links-column" class="xl:col-span-2 col-span-1 grid">
